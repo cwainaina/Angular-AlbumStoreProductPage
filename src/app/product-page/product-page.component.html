@@ -5,11 +5,11 @@
       <div class="col-sm-8">
         <app-product-tracklisting></app-product-tracklisting>
       </div>
-      <div *ngFor="let track of tracks">
-        <li>{{track.trackNumber}}</li>
-        <li>{{track.trackName}}</li>
-        <li>{{track.trackLength}}</li>
-        <li>{{track.trackPrice}}</li>
+      <div *ngFor="let track of tracks" [track]="track">
+        <li>TrackNo:{{track.trackNumber}}</li>
+        <li>TrackTitle:{{track.trackName}}</li>
+        <li>Duration:{{track.trackLength}}</li>
+        <li>Price:{{track.trackPrice}}</li>
 
       </div>
 </main>
